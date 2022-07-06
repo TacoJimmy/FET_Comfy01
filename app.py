@@ -6,7 +6,7 @@ import time
 import readdata
   
 client = mqtt.Client()
-client.username_pw_set("CuOkY4nZsqUmIfBkD6Eo","xxx")
+client.username_pw_set("c8oF8YMa88IbIiuvG2Ht","xxx")
 client.connect("thingsboard.cloud", 1883, 60)
 
 def job():  
@@ -18,7 +18,7 @@ def job():
     client.publish("v1/devices/me/telemetry", json.dumps(payload))
      
   
-schedule.every(5).minutes.do(job)  
+schedule.every(5).seconds.do(job)  
   
 while True:  
     try:
